@@ -1,18 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import 'Features/splash/presentation/views/splash_view.dart';
+
+
 
 void main() {
-  runApp(const MyApp());
+  runApp(const Bookly());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Bookly extends StatelessWidget {
+  const Bookly({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Bookly',
       theme: ThemeData(),
-      home: Container(),
+      home: const SplashView(),
     );
   }
 }
