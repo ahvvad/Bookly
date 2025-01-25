@@ -29,7 +29,7 @@ abstract class AppRouter {
         pageBuilder: (context, state) {
           return CustomTransitionPage(
             transitionDuration: const Duration(milliseconds: 300),
-            child: const SearchView(),
+            child: const BookDetailsView(),
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
               const begin = Offset(1.0, 0.0);
