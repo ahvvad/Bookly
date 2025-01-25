@@ -5,6 +5,7 @@ import 'box_action.dart';
 import 'custom_book_image.dart';
 import 'custom_book_details_app_bar.dart';
 import '../../../../../Core/utils/styles.dart';
+import 'similar_book_list_view.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
@@ -20,7 +21,7 @@ class BookDetailsViewBody extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: width * 0.25),
           child: const CustomBookImage(),
         ),
-        const SizedBox(height: 43.2),
+        const SizedBox(height: 33.2),
         const Text(
           'The Jungle Book',
           style: Styles.textStyle30,
@@ -38,6 +39,22 @@ class BookDetailsViewBody extends StatelessWidget {
         const BookRating(mainAxisAlignment: MainAxisAlignment.center),
         const SizedBox(height: 30.0),
         const BooksActions(),
+        const SizedBox(height: 30.0),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30.0),
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'You might also like',
+              style: Styles.textStyle14.copyWith(
+                fontWeight: FontWeight.w900,
+                fontSize: 15.0,
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(height: 20.0),
+        const SimilarBookListview(),
       ],
     );
   }
