@@ -10,27 +10,30 @@ class CustomSearchTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 50.0,
-      child: TextField(
-        cursorColor: kPrimaryColor,
-        decoration: InputDecoration(
-          fillColor: Colors.white,
-          filled: true,
-          enabledBorder: buildOutlineInputBorder(),
-          focusedBorder: buildOutlineInputBorder(),
-          hintText: 'Search',
-          hintStyle: Styles.textStyle18.copyWith(
-            color: kPrimaryColor,
-          ),
-          suffixIcon: IconButton(
-            onPressed: () {},
-            icon: const Opacity(
-              opacity: 0.7,
-              child: Icon(
-                FontAwesomeIcons.magnifyingGlass,
-                color: kPrimaryColor,
-                size: 24.0,
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 30.0),
+      child: SizedBox(
+        height: 50.0,
+        child: TextField(
+          cursorColor: kPrimaryColor,
+          decoration: InputDecoration(
+            fillColor: Colors.white,
+            filled: true,
+            enabledBorder: buildOutlineInputBorder(),
+            focusedBorder: buildOutlineInputBorder(),
+            hintText: 'Search',
+            hintStyle: Styles.textStyle18.copyWith(
+              color: kPrimaryColor,
+            ),
+            suffixIcon: IconButton(
+              onPressed: () {},
+              icon: const Opacity(
+                opacity: 0.7,
+                child: Icon(
+                  FontAwesomeIcons.magnifyingGlass,
+                  color: kPrimaryColor,
+                  size: 24.0,
+                ),
               ),
             ),
           ),
