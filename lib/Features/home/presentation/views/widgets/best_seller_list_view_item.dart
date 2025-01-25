@@ -46,7 +46,7 @@ class BestSellerListViewItem extends StatelessWidget {
                     SizedBox(
                       width: MediaQuery.of(context).size.width * 0.5,
                       child: Text(
-                        'Harry Potter and the Goblet of Fire',
+                        'The Jungle Book',
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: Styles.textStyle20.copyWith(
@@ -56,8 +56,7 @@ class BestSellerListViewItem extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 3.0),
-                    const Text('F. Scott Fitzgerald',
-                        style: Styles.textStyle14),
+                    const Text('Rudyard Kipling', style: Styles.textStyle14),
                     const SizedBox(height: 3.0),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
