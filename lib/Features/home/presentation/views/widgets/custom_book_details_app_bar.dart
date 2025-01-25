@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CustomBookDetailsAppBar extends StatelessWidget {
@@ -14,6 +13,7 @@ class CustomBookDetailsAppBar extends StatelessWidget {
           IconButton(
             icon: const Icon(
               Icons.close,
+              color: Colors.white,
               size: 30,
             ),
             onPressed: () {
@@ -24,6 +24,7 @@ class CustomBookDetailsAppBar extends StatelessWidget {
           IconButton(
             icon: const Icon(
               Icons.shopping_cart_outlined,
+              color: Colors.white,
               size: 30,
             ),
             onPressed: () {},
