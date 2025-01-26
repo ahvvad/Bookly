@@ -5,7 +5,6 @@ import 'package:bookly/Features/home/presentation/manger/featured_books_cubit/fe
 import 'package:bookly/Features/home/presentation/manger/newset_books_cubit/newset_books_cubit.dart';
 import 'package:bookly/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -19,12 +18,6 @@ class Bookly extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent,
-        statusBarIconBrightness: Brightness.light,
-      ),
-    );
     return MultiBlocProvider(
       providers: [
         BlocProvider(
@@ -35,7 +28,7 @@ class Bookly extends StatelessWidget {
         BlocProvider(
           create: (context) => NewsetBooksCubit(
             getIt.get<HomeRepoImpl>(),
-          ),
+          )..fetchNewsetBooks(),
         ),
       ],
       child: MaterialApp.router(

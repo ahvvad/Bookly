@@ -1,4 +1,3 @@
-
 import 'package:bookly/Features/home/presentation/views/widgets/box_action.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +16,9 @@ class BookDetailsSection extends StatelessWidget {
         const SizedBox(height: 33.2),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * 0.25),
-          child: const CustomBookImage(imageUrl: '',),
+          child: const CustomBookImage(
+            imageUrl: '',
+          ),
         ),
         const SizedBox(height: 33.2),
         const Text(
@@ -34,7 +35,11 @@ class BookDetailsSection extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 10.0),
-        const BookRating(mainAxisAlignment: MainAxisAlignment.center),
+        const BookRating(
+          mainAxisAlignment: MainAxisAlignment.center,
+          rating: 4,
+          ratingCount: 250,
+        ),
         const SizedBox(height: 30.0),
         const BooksActions(),
       ],
