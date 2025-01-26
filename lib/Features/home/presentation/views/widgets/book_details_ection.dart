@@ -17,7 +17,7 @@ class BookDetailsSection extends StatelessWidget {
         const SizedBox(height: 33.2),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * 0.25),
-          child: const CustomBookImage(),
+          child: const CustomBookImage(imageUrl: '',),
         ),
         const SizedBox(height: 33.2),
         const Text(
