@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'Similar_books_section.dart';
+import 'similar_books_section.dart';
 import 'book_details_ection.dart';
 import 'custom_book_details_app_bar.dart';
 
@@ -27,4 +27,3 @@ class BookDetailsViewBody extends StatelessWidget {
     );
   }
 }
- 
