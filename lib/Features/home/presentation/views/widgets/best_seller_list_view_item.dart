@@ -26,7 +26,7 @@ class BookListViewItem extends StatelessWidget {
           child: Row(
             children: [
               CustomBookImage(
-                imageUrl: bookModel.volumeInfo.imageLinks.thumbnail,
+                imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ?? '',
               ),
               const SizedBox(width: 30.0),
               Expanded(
@@ -45,7 +45,6 @@ class BookListViewItem extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 3.0),
                     Text(
                       bookModel.volumeInfo.authors![0],
                       style: Styles.textStyle14,
@@ -53,21 +52,16 @@ class BookListViewItem extends StatelessWidget {
                     const SizedBox(height: 3.0),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           'Free',
-                          style: Styles.textStyle20
+                          style: Styles.textStyle14
                               .copyWith(fontWeight: FontWeight.w800),
                         ),
-                        // const SizedBox(width: 3.0),
-                        // Text(
-                        //   '€',
-                        //   style: Styles.textStyle20.copyWith(
-                        //       fontWeight: FontWeight.w800, fontSize: 16.0),
-                        // ),
-                        const Spacer(),
                         BookRating(
-                          rating: bookModel.volumeInfo.averageRating ?? 0,
+                          rating:
+                              (bookModel.volumeInfo.averageRating ?? 0).toInt(),
                           ratingCount: bookModel.volumeInfo.ratingsCount ?? 0,
                         ),
                       ],
