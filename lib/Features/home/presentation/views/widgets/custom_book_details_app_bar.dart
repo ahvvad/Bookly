@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class CustomBookDetailsAppBar extends StatelessWidget {
   const CustomBookDetailsAppBar({super.key});
@@ -17,7 +18,7 @@ class CustomBookDetailsAppBar extends StatelessWidget {
               size: 30,
             ),
             onPressed: () {
-              Navigator.pop(context);
+              GoRouter.of(context).pop();
             },
           ),
           const Spacer(),
@@ -27,7 +28,9 @@ class CustomBookDetailsAppBar extends StatelessWidget {
               color: Colors.white,
               size: 30,
             ),
-            onPressed: () {},
+            onPressed: () {
+              
+            },
           ),
         ],
       ),
