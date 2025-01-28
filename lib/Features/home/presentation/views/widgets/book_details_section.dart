@@ -5,7 +5,6 @@ import 'package:bookly/Features/home/presentation/views/widgets/box_action.dart'
 import 'package:bookly/Features/home/presentation/views/widgets/book_rateing.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_book_image.dart';
 
-
 class BookDetailsSection extends StatelessWidget {
   const BookDetailsSection({super.key, required this.book});
   final BookModel book;
@@ -43,7 +42,7 @@ class BookDetailsSection extends StatelessWidget {
           ratingCount: book.volumeInfo.ratingsCount ?? 0,
         ),
         const SizedBox(height: 30.0),
-        const BooksActions(),
+        BooksActions(bookModel: book),
       ],
     );
   }
