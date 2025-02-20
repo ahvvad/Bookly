@@ -3,7 +3,7 @@
 <img src="assets/preview/preview.png" />
 
 ### Releases
-You can find the application in the **Releases** section or by [following this link](https://github.com/ahvvad/Bookly/releases/tag/1.0.1).
+You can find the application in the **Releases** section or by following this [link](https://github.com/ahvvad/Bookly/releases/tag/1.0.1).
 
 ---
 
